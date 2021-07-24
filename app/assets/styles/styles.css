@@ -1,0 +1,9 @@
+@import 'normalize.css';
+@import 'base/_variables';
+@import 'base/_global';
+@import 'base/_mixins';
+@import 'modules/_square';
+@import 'modules/_game-grid';
+@import 'modules/_colors';
+@import 'modules/_score-board';
+@import 'modules/_container';

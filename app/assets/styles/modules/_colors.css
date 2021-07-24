@@ -1,0 +1,23 @@
+.blue {
+    background-color: $mainBlue
+}
+
+.red {
+    background-color: $mainRed
+}
+
+.yellow {
+    background-color: $mainYellow
+}
+
+.green {
+    background-color: $mainGreen
+}
+
+.purple {
+    background-color: $mainPurple
+}
+
+.violet {
+    background-color: $mainViolet
+}
