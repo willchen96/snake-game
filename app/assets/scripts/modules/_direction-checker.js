@@ -1,20 +1,14 @@
-import createBody from './_createBody'
 import opposite from './_opposite'
-var body = createBody()
-console.log(body)
+import keyToDirection from './_key-to-direction'
 
-export default function(direction, e, changeDirection, setIntervalId) {
+export default function(e, directionTracker) {
     if(e.code === "ArrowUp" || e.code === "ArrowDown" || e.code === "ArrowLeft" || e.code === "ArrowRight") {
-        const newDirection = e.code.toLowerCase().slice(5)
-        if(newDirection !== opposite[direction]) {
-            clearInterval(setIntervalId)
-            changeDirection(body, newDirection)
-            return newDirection
+        if(keyToDirection(e) !== opposite[directionTracker]) {
+            return 'change'
         } else {
-            return direction
+            return 'no change'
         }
     } else {
-        clearInterval(setIntervalId)
-        return direction
+        return 'stop'
     }
 }

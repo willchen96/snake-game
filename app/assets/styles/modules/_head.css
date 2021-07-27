@@ -1,0 +1,49 @@
+.head {
+    border-radius: 15px 15px 10px 10px;
+    background-color: $mainViolet;
+    z-index: 10;
+    position: absolute;
+    visibility: hidden;
+
+    &__visible {
+        visibility: visible;
+    }
+
+
+    &__eyes{
+        background-color: rgb(253, 253, 253);
+        height: 8px;
+        aspect-ratio: 0.8;
+        border-radius: 4px;
+        position: absolute;
+        top: 10px;
+        
+        &__1{
+            left: 5px;
+            transform: rotate(10deg);
+        }
+
+        &__2{
+            right: 5px;
+            transform: rotate(-10deg);
+        }
+
+        &__pupils {
+            position: absolute;
+            height: 6px;
+            width: 5px;
+            border-radius: 2.5px;
+            background-color: rgb(54, 54, 54);
+            top: 0.1px;
+
+            &__1{
+                left: 0.75px;
+            }
+            &__2{
+                left: 0.7px;
+            }
+            
+        }
+
+    }
+}

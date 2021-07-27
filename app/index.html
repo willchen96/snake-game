@@ -9,17 +9,29 @@
 <body>
     <div class="container">
         <div class="game-grid">
-            <div class="square square__head">
-                <div class="square__head__eyes square__head__eyes__1"></div>
-                <div class="square__head__eyes square__head__eyes__2"></div>
+            <div class="square head">
+                <div class="head__eyes head__eyes__1">
+                    <div class="head__eyes__pupils head__eyes__pupils__1"></div>
+                </div>
+                <div class="head__eyes head__eyes__2">
+                    <div class="head__eyes__pupils head__eyes__pupils__2"></div>
+                </div>
             </div>
         </div>
         <div class="score-board">
             <h2 class="score-board__label">Score</h1>
             <h2 class="score-board__score">0</h1>
         </div>
+        <div class="start overlay">
+            <h1 class="start__title">Snake</h1>
+            <h2 class="start__instructions">Press Arrow Keys to Start</h2>
+        </div>    
+        <div class="gameover overlay">
+            <h1 class="gameover__title">Gameover</h1>
+            <h2 class="gameover__score-label">Score</h2>
+            <h2 class="gameover__score-number">0</h2>
+            <button class="gameover__restart-button button">Restart</button>
+        </div>    
     </div>
-    
-    
 </body>
 </html>

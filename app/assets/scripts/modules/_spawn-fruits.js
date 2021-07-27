@@ -2,8 +2,19 @@ import { Square } from '../modules/_square'
 
 const colors = ['blue', 'red', 'yellow', 'green', 'purple']
 
-function coordinatesRand() {
-    return Math.floor(Math.random() * 15 + 1)
+function coordinatesRand(body) {
+    var board = [...Array(225).keys()]
+    board.pop()
+    const bodyPositions = []
+    body.forEach(square => {
+        let position = square.x + square.y * 15
+        
+        bodyPositions.push(position)
+    });
+    const spaces = board.filter((i)=> bodyPositions.indexOf(i) < 0)
+    const index = Math.floor(Math.random() * (225 - body.length) + 1)
+    const position = spaces[index]
+    return [(position % 15), (Math.floor(position / 15))]
 }
 
 function colorRand() {
@@ -11,7 +22,9 @@ function colorRand() {
     return colors[z]   
 }
 
-export default function() {
-    var fruit = new Square(coordinatesRand(), coordinatesRand(), document.createElement('div'), colorRand())
+export default function(body) {
+    const [x, y] = coordinatesRand(body)
+    console.log(x + ',' + y)
+    var fruit = new Square(x, y, document.createElement('div'), colorRand())
     return fruit
 }

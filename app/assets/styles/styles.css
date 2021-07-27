@@ -7,3 +7,9 @@
 @import 'modules/_colors';
 @import 'modules/_score-board';
 @import 'modules/_container';
+@import 'modules/_overlay';
+@import 'modules/_gameover';
+@import 'modules/_button';
+@import 'modules/_start';
+@import 'modules/_head';
+@import 'modules/_rotate';

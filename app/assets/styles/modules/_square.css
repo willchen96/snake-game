@@ -2,31 +2,9 @@
     height: 30px;
     width: 30px;
     border-radius: 10px;
+    position: absolute;
 
-    &__head{
-        border-radius: 15px 15px 10px 10px;
-        background-color: $mainViolet;
-        z-index: 10;
-        position: relative;
-
-        &__eyes{
-            background-color: white;
-            height: 8px;
-            aspect-ratio: 0.8;
-            border-radius: 4px;
-            position: absolute;
-            top: 10px;
-            
-            &__1{
-                left: 5px;
-                transform: rotate(10deg);
-            }
-
-            &__2{
-                right: 5px;
-                transform: rotate(-10deg);
-            }
-
-        }
+    &__transition {
+        transition: top 200ms ease-out, left 200ms ease-out;
     }
 }

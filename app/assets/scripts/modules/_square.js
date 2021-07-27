@@ -6,17 +6,18 @@ export class Head {
         this.position(this.x, this.y) 
     }
     position(x, y) {
-        this.div.style.gridColumnStart = x
-        this.div.style.gridRowStart = y
+        this.div.style.top = `${y * 30}px`
+        this.div.style.left = `${x * 30}px`
     }
 
     shift(x, y) {
+        
         this.previousX = this.x
         this.previousY = this.y
         this.x = x
         this.y = y
         this.position(x, y)
-    }    
+    }  
 }
 
 const gameGrid = document.querySelector('.game-grid')
@@ -33,5 +34,9 @@ export class Square extends Head {
         this.div.classList.add(this.color)
         this.position(this.x, this.y)
         gameGrid.append(this.div)
+    }
+
+    removeFromGrid(){
+        gameGrid.removeChild(this.div)
     }
 }
