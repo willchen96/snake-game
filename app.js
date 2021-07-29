@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
-const path = require('path');
-
-const port = 8080
+const path = require('path')
+require('dotenv').config()
 
 // app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'docs'))
@@ -40,6 +39,8 @@ app.post('/', (req, res) => {
     }
     res.redirect('/')
 })
+
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
