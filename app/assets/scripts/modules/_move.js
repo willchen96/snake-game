@@ -8,6 +8,11 @@ document.querySelector('.gameover__restart-button').addEventListener("click", ()
     previousDirection = 'up'
 })
 
+document.querySelector('.highscore__form').addEventListener("submit", () => {
+    headDegree = 0
+    previousDirection = 'up'
+})
+
 function rotateHead(a, b, head) {
     if(previousDirection == a){
         headDegree = headDegree + 90 

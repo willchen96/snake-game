@@ -8,14 +8,10 @@ export default function(body, tailDegree) {
                 //turn anticlockwise
                 tailDegree = tailDegree - 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('up to left')
-                console.log(tailDegree)
             } else if(secondLast.x > tail.x){
                 //turn clockwise
                 tailDegree = tailDegree + 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('up to right')
-                console.log(tailDegree)
             }       
         } else if (tail.y > tail.previousY){
             //down 
@@ -23,14 +19,10 @@ export default function(body, tailDegree) {
                 //turn anticlockwise
                 tailDegree = tailDegree - 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('down to right')
-                console.log(tailDegree)
             } else if(secondLast.x < tail.x){
                 //turn lockwise
                 tailDegree = tailDegree + 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('down to left')
-                console.log(tailDegree)
             }       
         }
     } else if(tail.y == tail.previousY) {
@@ -40,14 +32,10 @@ export default function(body, tailDegree) {
                 //turn clockwise
                 tailDegree = tailDegree + 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('left to up')
-                console.log(tailDegree)
             } else if(secondLast.y > tail.y){
                 //turn anticlockwise
                 tailDegree = tailDegree - 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('left to down')
-                console.log(tailDegree)
             }       
         } else if(tail.x > tail.previousX) {
             //right 
@@ -55,14 +43,10 @@ export default function(body, tailDegree) {
                 //turn anticlockwise
                 tailDegree = tailDegree - 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('right to up')
-                console.log(tailDegree)
             } else if(secondLast.y > tail.y){
                 //turn clockwise
                 tailDegree = tailDegree + 90 
                 tail.div.style.transform = `rotate(${tailDegree}deg)`
-                console.log('right to down')
-                console.log(tailDegree)
             }       
         }
     }

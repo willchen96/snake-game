@@ -14,11 +14,6 @@ const postCSSPlugins = [
   require('autoprefixer')
 ]
 
-let cssConfig = {
-  test: /\.css$/i,
-  use: ['css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
-}
-
 let pages = fse.readdirSync('./app').filter(function(file) {
   return file.endsWith('.html') //select only html files from array of all files in app folder returned by readdirSync
   }).map(function(page) {
@@ -32,7 +27,7 @@ let config
 
 if (currentTask == 'dev') {
   config = {
-    entry: './app/assets/scripts/App.js',
+    entry: './app/assets/scripts/index.js',
     output: {
       filename: 'bundled.js',
       path: path.resolve(__dirname, 'app')
@@ -61,7 +56,7 @@ if (currentTask == 'dev') {
 
 if (currentTask == 'build') {
   config = {
-    entry: './app/assets/scripts/App.js',
+    entry: './app/assets/scripts/index.js',
     output: {
       filename: '[name].[chunkhash].js',
       chunkFilename: '[name].[chunkhash].js',

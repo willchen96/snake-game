@@ -31,8 +31,6 @@
         background-color: $mainYellow;
         margin-bottom: 50px;
         
-        &:hover{
-            filter: brightness(85%);
-        }
+        
     }
 }

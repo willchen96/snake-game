@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake</title>
+    <title>Snake Game</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="game-grid">
-            <div class="square head">
-                <div class="head__eyes head__eyes__1">
-                    <div class="head__eyes__pupils head__eyes__pupils__1"></div>
+        <div class="game">
+            <div class="game-grid">
+                <div class="square head">
+                    <div class="head__eyes head__eyes__1">
+                        <div class="head__eyes__pupils head__eyes__pupils__1"></div>
+                    </div>
+                    <div class="head__eyes head__eyes__2">
+                        <div class="head__eyes__pupils head__eyes__pupils__2"></div>
+                    </div>
                 </div>
-                <div class="head__eyes head__eyes__2">
-                    <div class="head__eyes__pupils head__eyes__pupils__2"></div>
+            </div>
+            <div class="score-board">
+                <h2 class="score-board__label">Score</h1>
+                    <h2 class="score-board__score">0</h1>
+            </div>
+            <div class="start overlay">
+                <h1 class="start__title">Snake</h1>
+                <h2 class="start__instructions">Press Arrow Keys to Start</h2>
+            </div>
+            <div class="gameover overlay">
+                <h1 class="gameover__title">Gameover</h1>
+                <h2 class="gameover__score-label">Score</h2>
+                <h2 class="gameover__score-number">0</h2>
+                <button class="gameover__restart-button button">Restart</button>
+            </div>
+            <div class="highscore overlay">
+                <h1 class="highscore__title">High score!</h1>
+                <h2 class="highscore__score-number">0</h2>
+                <div>
+                    <form class="highscore__form" action="/" method="POST">
+                        <input placeholder="Nickname" maxlength="8" class="highscore__form__player-input" type="text" name="name">
+                        <button class="button button--straight-left-edge button--purple highscore__form__button">Enter</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="score-board">
-            <h2 class="score-board__label">Score</h1>
-            <h2 class="score-board__score">0</h1>
+        <div class="leaderboard">
+            <h1 class="leaderboard__title">Leaderboard</h1>
+            <div class="leaderboard__entries"></div>
         </div>
-        <div class="start overlay">
-            <h1 class="start__title">Snake</h1>
-            <h2 class="start__instructions">Press Arrow Keys to Start</h2>
-        </div>    
-        <div class="gameover overlay">
-            <h1 class="gameover__title">Gameover</h1>
-            <h2 class="gameover__score-label">Score</h2>
-            <h2 class="gameover__score-number">0</h2>
-            <button class="gameover__restart-button button">Restart</button>
-        </div>    
     </div>
 </body>
+
 </html>

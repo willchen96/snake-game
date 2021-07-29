@@ -1,0 +1,46 @@
+.leaderboard {
+    display: inline-block;
+    background-color: white;
+    border: $themeColor solid 10px ;
+    border-radius: 20px;
+   
+    height: 527px;
+    width: 210px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    &__title {
+        font-size: 25px;
+        margin: 0;
+        margin-bottom: 10px;
+        background-color: $themeColor;
+        color: white;
+        padding-bottom: 12px;
+        padding-top: 8px;
+    }
+
+    &__entry {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        &__num {
+            font-size: 18px;
+            display: inline-block;
+            width: 25px;
+        }
+        &__name {
+            font-size: 18px;
+            display: inline-block;
+        }
+        &__score {
+            font-size: 18px;
+            float: right;
+        }
+
+        & > * {
+            color: $themeColor
+        }
+    }
+
+}

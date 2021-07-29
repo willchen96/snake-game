@@ -13,3 +13,6 @@
 @import 'modules/_start';
 @import 'modules/_head';
 @import 'modules/_rotate';
+@import 'modules/_game';
+@import 'modules/_leaderboard';
+@import 'modules/_highscore';

@@ -5,7 +5,6 @@ export default function(body, fruit) {
             tail.div.style.borderRadius = '10px'
             fruit.shift(tail.previousX, tail.previousY)
             if(tail.x < fruit.x && tail.y == fruit.y) {
-                console.log('left')
                 fruit.div.style.borderRadius = '0 15px 15px 0'
             } else if (tail.x > fruit.x && tail.y == fruit.y) {
                 fruit.div.style.borderRadius = '15px 0 0 15px'

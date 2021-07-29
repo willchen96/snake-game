@@ -5,6 +5,6 @@
     position: absolute;
 
     &__transition {
-        transition: top 200ms ease-out, left 200ms ease-out;
+        transition: top 200ms ease-out, left 200ms ease-in-out;
     }
 }

@@ -3,7 +3,7 @@
     height: 470px;
     border-radius: 20px;
     display: inline-block;
-    border: 10px solid $mainDarkGrey;
+    border: 10px solid $themeColor;
     z-index: 9;
     position: relative;
     

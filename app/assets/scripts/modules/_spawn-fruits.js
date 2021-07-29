@@ -8,7 +8,6 @@ function coordinatesRand(body) {
     const bodyPositions = []
     body.forEach(square => {
         let position = square.x + square.y * 15
-        
         bodyPositions.push(position)
     });
     const spaces = board.filter((i)=> bodyPositions.indexOf(i) < 0)
@@ -24,7 +23,6 @@ function colorRand() {
 
 export default function(body) {
     const [x, y] = coordinatesRand(body)
-    console.log(x + ',' + y)
     var fruit = new Square(x, y, document.createElement('div'), colorRand())
     return fruit
 }
