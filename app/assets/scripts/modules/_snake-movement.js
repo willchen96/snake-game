@@ -25,8 +25,6 @@ function moveAndEat(body, direction){
         
         if(isHighScore(score)) {
             renderHighScoreForm(score)
-            console.log('highscore!')
-            
         } else {
             renderGameoverOverlay(score)
         }
