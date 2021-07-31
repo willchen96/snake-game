@@ -4,14 +4,13 @@ const colors = ['blue', 'red', 'yellow', 'green', 'purple']
 
 function coordinatesRand(body) {
     var board = [...Array(225).keys()]
-    board.pop()
     const bodyPositions = []
     body.forEach(square => {
         let position = square.x + square.y * 15
         bodyPositions.push(position)
     });
     const spaces = board.filter((i)=> bodyPositions.indexOf(i) < 0)
-    const index = Math.floor(Math.random() * (225 - body.length) + 1)
+    const index = Math.floor(Math.random() * (225 - body.length))
     const position = spaces[index]
     return [(position % 15), (Math.floor(position / 15))]
 }
